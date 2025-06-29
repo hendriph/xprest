@@ -1,4 +1,8 @@
 # xprest
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Test](https://img.shields.io/badge/test-coverage-90%25-yellowgreen)
 
 `xprest` adalah REST API starter kit atau boilerplate code berbasis Express.js yang modular, scalable, siap produksi dan sudah mendukung multi-database (MySQL, PostgreSQL, MongoDB), autentikasi JWT, cache, validasi request, dan lainnya.
 

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "description": "Modular REST API boilerplate with Express.js",
+  "repository": "https://github.com/hendriph/xprest.git",
+  "author": "Hendri Purwo Handoyo <hendriph@gmail.com>",
   "license": "MIT",
+  "keywords": ["express.js", "node.js", "express js", "node js", "express", "node", "boilerplate", "rest", "restful", "api", "modular", "starter kit", "scaffolding"],
   "scripts": {
     "dev": "DEBUG=xprest:* nodemon src/index.js",
     "make:controller": "node tools/make.js",

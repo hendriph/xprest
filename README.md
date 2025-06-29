@@ -50,10 +50,24 @@ npm run dev
 ## 🔐 Authentication
 
 Endpoints:
-- `POST /api/v1/auth/register`
-- `POST /api/v1/auth/login`
-- `POST /api/v1/auth/refresh-token`
-- `POST /api/v1/auth/logout` (requires access token)
+- `POST /v1/auth/register`
+- `POST /v1/auth/login`
+- `POST /v1/auth/refresh-token`
+- `POST /v1/auth/logout` (requires access token)
+- `POST /v1/auth/forgot-password`
+- `POST /v1/auth/reset-password`
+
+---
+
+## 😎 User
+
+Endpoints:
+- `GET /v1/user` (requires access token)
+- `POST /v1/user/:id` (requires access token)
+- `POST /v1/user` (requires access token)
+- `PUT /v1/user` (requires access token)
+- `DELETE /v1/user` (requires access token)
+- `GET /v1/user/me` (requires access token)
 
 ---
 

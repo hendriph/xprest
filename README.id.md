@@ -1,10 +1,10 @@
 # xprest
 
-`xprest` is a REST API starter kit or boilerplate code based on Express.js that is modular, scalable, production-ready and already supports multi-database (MySQL, PostgreSQL, MongoDB), JWT authentication, cache, request validation, and more.
+`xprest` adalah REST API starter kit atau boilerplate code berbasis Express.js yang modular, scalable, siap produksi dan sudah mendukung multi-database (MySQL, PostgreSQL, MongoDB), autentikasi JWT, cache, validasi request, dan lainnya.
 
 ---
 
-## 🚀 Features
+## ✨ Fitur Utama
 
 - 🔐 JWT Auth (Login, Register, Refresh, Logout)
 - 🔄 Role-based Access Control (RBAC)
@@ -20,7 +20,7 @@
 
 ---
 
-## 📦 Installation
+## 📦 Instalasi
 
 ```bash
 git clone https://github.com/your-repo/xprest.git
@@ -28,7 +28,7 @@ cd xprest
 npm install
 ```
 
-Create a `.env` file by copying `.env.example`, then configure the database settings. Example using MySQL:
+Buat file `.env` dari `.env.example` lalu isi konfigurasi database yang ingin digunakan. Misalnya untuk MySQL:
 
 ```env
 USE_MYSQL=true
@@ -40,16 +40,16 @@ MYSQL_USER=root
 MYSQL_PASS=
 ```
 
-Run the server:
+Jalankan server:
 ```bash
 npm run dev
 ```
 
 ---
 
-## 🔐 Authentication
+## 🔐 Autentikasi
 
-Endpoints:
+Endpoint:
 - `POST /api/v1/auth/register`
 - `POST /api/v1/auth/login`
 - `POST /api/v1/auth/refresh-token`
@@ -57,7 +57,7 @@ Endpoints:
 
 ---
 
-## ⚡ Using Cache
+## ⚡ Cara Menggunakan Cache
 
 ```js
 const cache = require('./src/utils/cache');
@@ -67,7 +67,7 @@ await cache.redis.set('mykey', { name: 'Redis Cache' });
 const valueFromRedis = await cache.redis.get('mykey');
 
 // Memory
-cache.memory.set('temp', 123, 60); // TTL 60 seconds
+cache.memory.set('temp', 123, 60); // TTL 60 detik
 const memValue = cache.memory.get('temp');
 
 // File
@@ -77,7 +77,7 @@ const fileValue = cache.file.get('user_data');
 
 ---
 
-## 📁 Project Structure
+## 📁 Struktur Folder
 
 ```
 src/
@@ -87,17 +87,17 @@ src/
 ├── routes/             # Route endpoint
 ├── services/           # Business logic
 ├── models/             # DB models (multi-db)
-├── config/             # Configuration (DB, mail)
-├── utils/              # Utility (Library) Helper (token, logger, dsb)
+├── config/             # Konfigurasi (DB, mail)
+├── utils/              # Helper util (token, logger, dsb)
 ├── middlewares/        # Middleware global
 ├── validations/        # Joi schema
 ├── queues/             # BullMQ worker & job
 ├── templates/          # Email templates
 storages/
 ├── logs/               # log info, error, & audit
-├── uploads/            # uploaded (attachment) file
-tests/                  # testing code using JEST
-tools/                  # CLI for making controller, service, etc
+├── uploads/            # file yang diupload
+tests/                  # kode tes menggunakan jest
+tools/                  # CLI membuat controller, service, dll
 ```
 
 ---
@@ -112,7 +112,7 @@ npm run test
 
 ## 📊 Swagger Docs
 
-Access API documentation at:
+Dokumentasi API tersedia di:
 ```
 /docs
 ```
@@ -121,23 +121,24 @@ Access API documentation at:
 
 ## 🧾 Audit Logging
 
-Every critical user action (like login, update) is logged using Winston into:
+Setiap aksi penting pengguna (login, update, dll) dicatat ke file log via Winston:
 ```
 storages/logs/audit-YYYY-MM-DD.log
 ```
 
 ---
 
-## 📥 Request/Response Format
+## 📥 Format Response
 
-All responses follow this pattern:
+Format standar response:
 ```json
 {
   "success": true,
   "data": { ... }
 }
 ```
-Errors are formatted like:
+
+Format error:
 ```json
 {
   "success": false,
@@ -152,7 +153,7 @@ Errors are formatted like:
 
 ## ⚙️ CLI Generator
 
-Use CLI to scaffold modules:
+Gunakan CLI untuk generate modul:
 ```bash
 npm run make:controller User
 ```
@@ -161,8 +162,8 @@ npm run make:controller User
 
 ## 📧 Email + Queue
 
-Register triggers async email via BullMQ.
-Run the worker:
+Proses register akan kirim email via BullMQ.
+Jalankan worker dengan:
 ```bash
 node src/queues/workers/email.worker.js
 ```
@@ -171,13 +172,13 @@ node src/queues/workers/email.worker.js
 
 ## 🛡️ Rate Limiter
 
-Secure sensitive routes with Redis-backed rate limiter middleware.
+Gunakan middleware rate limiter berbasis Redis untuk melindungi endpoint sensitif.
 
 ---
 
-## ❤️ Contributing
+## ❤️ Kontribusi
 
-Feel free to open pull requests or issues to contribute to development. If you find this useful, consider starring the repo!
+Pull request dan issue sangat diterima untuk pengembangan lebih lanjut. Jangan lupa bintangin repo ini kalau kamu suka!
 
 ---
 

@@ -1,0 +1,26 @@
+openapi: 3.0.0
+info:
+  title: Xprest API
+  version: 1.0.0
+  description: Dokumentasi REST API Xprest
+
+paths:
+  /v1/auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Berhasil login
+        '401':
+          description: Gagal login

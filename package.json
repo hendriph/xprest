@@ -1,0 +1,62 @@
+{
+  "name": "xprest",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "description": "Modular REST API boilerplate with Express.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "DEBUG=xprest:* nodemon src/index.js",
+    "make:controller": "node tools/make.js",
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.16.0",
+    "argon2": "^0.43.0",
+    "aws-sdk": "^2.1692.0",
+    "bcrypt": "^6.0.0",
+    "bullmq": "^5.56.0",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "debug": "^4.4.1",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.6.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.1",
+    "mysql2": "^3.14.1",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^7.0.3",
+    "pg": "^8.11.1",
+    "rate-limit-redis": "^4.2.1",
+    "sequelize": "^6.37.7",
+    "ssh2-sftp-client": "^12.0.0",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^6.3.3"
+  },
+  "_moduleAliases": {
+    "@config": "src/config",
+    "@controllers": "src/controllers",
+    "@models": "src/models",
+    "@middlewares": "src/middlewares",
+    "@queues": "src/queues",
+    "@services": "src/services",
+    "@utils": "src/utils",
+    "@validations": "src/validations"
+  }
+}
